@@ -1,4 +1,3 @@
-// app/controllers/employeeController.js
 app.controller('EmployeeController', function($scope, $http) {
   $scope.employees = [];
   $scope.newEmployee = {};
