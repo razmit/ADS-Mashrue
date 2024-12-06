@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h2>Employees</h2>
+  <button class="btn btn-success" (click)="openAddEmployeeModal()">Add Employee</button>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th><th>Name</th><th>Position</th><th>Department</th><th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let emp of employees">
+    <td>{{ emp.id }}</td>
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.position }}</td>
+    <td>{{ emp.department }}</td>
+    <td>
+      <button class="btn btn-primary btn-sm" (click)="editEmployee(emp)">Edit</button>
+      <button class="btn btn-danger btn-sm" (click)="deleteEmployee(emp.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Modal for Add/Edit Employee -->
